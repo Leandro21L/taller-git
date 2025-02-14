@@ -10,7 +10,11 @@ public class App {
         System.out.println("La suma de los numeros es: " + sum(a, b));
         System.out.println("La resta de los numeros es: " + subtract(a, b));
         System.out.println("El producto de los numeros es: " + multiplication(a, b));
-        System.out.println("la division de los numeros es: " + division(a, b));
+        if (b == 0) {
+            System.out.println("Eror: no es posible dividir por 0");
+        } else {
+            System.out.println("la division de los numeros es: " + division(a, b));
+        }
     }
 
     public static int sum(int a, int b) {
