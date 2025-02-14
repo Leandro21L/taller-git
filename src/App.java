@@ -8,6 +8,8 @@ public class App {
         System.out.println("Ingrese otro numero");
         int b = scanner.nextInt();
         System.out.println("La suma de los numeros es: " + sum(a, b));
+        System.out.println("La resta de los numeros es: " + subtract(a, b));
+        System.out.println("El producto de los numeros es: " + multiplication(a, b));
     }
 
     public static int sum(int a, int b) {
@@ -16,5 +18,9 @@ public class App {
 
     public static int subtract(int a, int b) {
         return a - b;
+    }
+
+    public static int multiplication(int a, int b) {
+        return a * b;
     }
 }
