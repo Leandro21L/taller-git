@@ -13,11 +13,11 @@ jobs:
     - name: Configurar Java
       uses: actions/setup-java@v4
       with:
-        distribution: 'temurin' # Puedes cambiar esto según tu versión
-        java-version: '17' # Versión de Java que uses
+        distribution: 'temurin' 
+        java-version: '17' 
 
     - name: Compilar el proyecto
-      run: javac suma.java # o cualquier otro comando que uses
+      run: javac suma.java 
 
     - name: Ejecutar pruebas
-      run: java suma # Aquí podrías ejecutar JUnit u otra suite de pruebas
+      run: java suma 
