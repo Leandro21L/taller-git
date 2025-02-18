@@ -1,0 +1,23 @@
+name: CI - Ejecutar Pruebas Automáticas
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Configurar Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin' # Puedes cambiar esto según tu versión
+        java-version: '17' # Versión de Java que uses
+
+    - name: Compilar el proyecto
+      run: javac suma.java # o cualquier otro comando que uses
+
+    - name: Ejecutar pruebas
+      run: java suma # Aquí podrías ejecutar JUnit u otra suite de pruebas
